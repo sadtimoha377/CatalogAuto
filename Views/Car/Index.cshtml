@@ -1,0 +1,30 @@
+@model IEnumerable<CarModel>
+
+@{
+    ViewData["Title"] = "Cars catalog";
+}
+
+<div>
+    <h2>@ViewBag.Title</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Price ($)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var car in Model)
+            {
+                <tr>
+                    <td>@car.Brand</td>
+                    <td>@car.Model</td>
+                    <td>@car.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
